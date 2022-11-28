@@ -1,0 +1,168 @@
+#ifndef main_dialog_H
+#define main_dialog_H
+
+#include <QTableView>
+#include <QMainWindow>
+#include <QStandardItemModel>
+
+#include <QMessageBox>
+#include <QInputDialog>
+
+//https://www.baidu.com/
+#include <QtWebKit/QWebElement>
+#include <QtWebKit/QtWebKit>
+#include <QtNetwork/QNetworkInterface>
+#include <QTcpSocket>
+
+#include <QtSql>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+
+#include "channel_dialog.h"
+#include "phase_dialog.h"
+#include "pattern_dialog.h"
+#include "split_dialog.h"
+#include "sequence_dialog.h"
+#include "timebasedayplan_dialog.h"
+#include "action_dialog.h"
+#include "schedule_dialog.h"
+
+
+namespace Ui {
+class main_dialog;
+}
+
+class main_dialog : public QDialog
+{
+    Q_OBJECT
+
+public:
+    main_dialog(QWidget *parent = 0);
+    ~main_dialog();
+protected:
+    void closeEvent(QCloseEvent *e);
+
+    void ChannelTableShow(void);
+    void PhaseTableShow(void);
+    void PatternTableShow(void);
+    void SplitTableShow(void);
+    void SequenceTableShow(void);
+    void SequenceTableViewShow(void);
+    void ActionTableShow(void);
+    void TimeBaseDayPlanTableShow(void);
+    void ScheduleTableShow(void);
+    void OverlapTableShow(void);
+    void VehicleDetectorTableShow(void);
+    void PedestrianDetectorTableShow(void);
+    void PreemptTableShow(void);
+
+    void datainit(void);
+    void ScheduleTabInit(void);
+    void SplitTabInit(void);        //读取数据库，初始化绿信比数据
+    void SequenceTabInit(void);     //读取数据库，初始化相序表数据
+    void ChannelTabInit(void);
+    void PhaseTabInit(void);
+    void ActionTabInit(void);
+
+    void tableChannelShowData(void);
+    void tablePhaseShowData(void);
+    void tableScheduleShowData(void);
+    void tableActionShowData(void);
+
+    void PatternDataInit(void);
+    void TimeBaseDayPlanDataInit(void);
+    void OverlapDataInit(void);
+    void VehicleDetectorDataInit(void);
+    void PedestrianDetectorDataInit(void);
+    void PreemptDataInit(void);
+
+signals:
+    void ChannelDataSet(Channel);
+    void PhaseDataSet(Phase);
+    void PatternDataSet(Pattern);
+    void SplitDataSet(Split);
+    void SequenceDataSet(Sequence_TypeDef);
+    void TimeBaseDayPlanDataSet(TimeBaseDayPlan);
+    void TimeBaseAscActionDataSet(ActionType);
+    void ScheduleDataSet(Schedule);
+
+private slots:
+    void OpenDatabase(QString newtsc);
+    void SaveDatabase(void);
+    void tableSplitShowData(int SplitIndex);
+    void tableSequenceShowData(int SequenceIndex);
+
+    void SendEditChannel(void); //双击通道表的槽函数
+    void SendEditPhase(void);   //双击通道表的槽函数
+    void SendEditPattern(void);
+    void SendEditSplit(void);
+    void SendEditSequence(void);
+    void SendEditDayPlan(void);
+    void SendEditAction(void);
+    void SendEditSchedule(void);
+
+    void ChannelDataReceive(Channel channel);//接收 通道数据信号 的槽函数
+    void PhaseDataReceive(Phase phase);//接收 通道数据信号 的槽函数
+    void PatternDataReceive(Pattern pattern);
+    void SplitDataReceive(Split split);
+    void SequenceDataReceive(Sequence_TypeDef sequence);
+
+
+    void tablePatternSelectChange(void);
+    void tablePhaseSelectChange(QModelIndex index);
+
+    void on_pbPattern_delete_clicked();
+    void on_pbPattern_copy_clicked();
+
+    void on_pbPhase_copy_clicked();
+
+    void on_pbPhase_delete_clicked();
+
+    void on_pushButton_SplitDelRow_clicked();
+
+    void on_pushButton_Save_clicked();
+
+private:
+    Ui::main_dialog *ui;
+    channel_dialog  *channel_dlg;
+    phase_dialog    *phase_dlg;
+    pattern_dialog  *pattern_dlg;
+    split_dialog    *split_dlg;
+    sequence_dialog *sequence_dlg;
+    timebasedayplan_dialog *timebasedayplan_dlg;
+    action_dialog   *action_dlg;
+    schedule_dialog *schedule_dlg;
+
+    QSqlDatabase db;
+    QStandardItemModel *ChannelModel;
+    QStandardItemModel *PhaseModel;
+    QStandardItemModel *PatternModel;
+    QStandardItemModel *SplitModel;
+    QStandardItemModel *SequenceModel;
+    QStandardItemModel *SequenceModel2;
+    QStandardItemModel *ActionModel;
+    QStandardItemModel *TimeBaseDayPlanModel;
+    QStandardItemModel *ScheduleModel;
+    QStandardItemModel *OverlapModel;
+    QStandardItemModel *VehicleDetectorModel;
+    QStandardItemModel *PedestrianDetectorModel;
+    QStandardItemModel *PreemptModel;
+
+    QStringList channelControlTypeStrList;
+    QStringList channelFlashStrList;
+    QStringList channelDimStrList;
+    QStringList channelPositionStrList;
+    QStringList channelDirectionStrList;
+    QStringList SplitModeStrList;
+
+    QString ParName;
+    Schedule_Tab ScheduleTab;
+    Action_Tab ActionTab;
+    Phase_Tab PhaseTab;
+    Channel_Tab ChannelTab;
+    Split_Tab SplitTab;
+    Sequence_Tab SeqTab;
+};
+
+
+#endif // main_dialog_H

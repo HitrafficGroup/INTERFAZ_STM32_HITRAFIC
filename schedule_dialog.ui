@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>schedule_dialog</class>
+ <widget class="QDialog" name="schedule_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>458</width>
+    <height>466</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>调度计划编辑</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>91</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>调度计划号:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_confirm">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>430</y>
+     <width>90</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cancel">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>430</y>
+     <width>90</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>91</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>时段表号:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_ScheduleNum">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>20</y>
+     <width>141</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_DayPlanNum">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>60</y>
+     <width>141</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_m">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>81</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>月份</string>
+   </property>
+   <widget class="QCheckBox" name="checkBox_m1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>11</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>210</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>10</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_m12">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_month">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全选</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_d">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>100</y>
+     <width>261</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>日期</string>
+   </property>
+   <widget class="QCheckBox" name="checkBox_d1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>210</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d9">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>41</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d10">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>60</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>10</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d11">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>90</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>11</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d14">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>180</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>14</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d15">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>210</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>15</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d17">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>30</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>17</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d18">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>60</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>18</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d16">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>240</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>16</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d20">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>120</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d19">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>90</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>19</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d13">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>150</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>13</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d12">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>120</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d21">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>150</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>21</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d24">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>240</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>24</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d25">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>30</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>25</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d27">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>90</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>27</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d28">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>120</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>28</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d26">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>60</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>26</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d30">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>180</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>30</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d29">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>150</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>29</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d23">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>210</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>23</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d22">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>180</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>22</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_d31">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>210</y>
+      <width>40</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>31</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_date1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全选</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_date2">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>280</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全选</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_date3">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>280</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全选</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_date4">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>280</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全选</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_w">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>100</y>
+     <width>81</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>星期</string>
+   </property>
+   <widget class="QCheckBox" name="checkBox_w2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_w3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_w4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_w5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_w6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_w7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>210</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_w1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>51</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>日</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_day">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全选</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
